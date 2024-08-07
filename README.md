@@ -1,9 +1,18 @@
 # DNSzonetransfer
 
+### Script
+```
+chmod +x dnsz0netransf3r.sh
+
+./dnsz0netransf3r.sh site.com.br
+```
+
+### Command line
 ```bash
 for ns in $(host -t ns site.com.br | cut -d " " -f 4); do; host -a site.com.br $ns; echo "\n###########################################\n";done;
 ```
 
+### Demo
 ```
 ┌──(kali㉿kali)-[~/Documents/]
 └─$ for ns in $(host -t ns businesscorp.com.br | cut -d " " -f 4); do; host -a businesscorp.com.br $ns; echo "\n###########################################\n";done;
